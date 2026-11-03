@@ -3,7 +3,7 @@
 LANGUAGES = {
     "tr": {
         "name": "Türkçe",
-        "title": "Basılı Tut",
+        "title": "HoldKey",
         "keys": "Tuşlar",
         "none": "— Yok —",
         "mode": "Mod",
@@ -32,7 +32,7 @@ LANGUAGES = {
     },
     "en": {
         "name": "English",
-        "title": "Hold Key",
+        "title": "HoldKey",
         "keys": "Keys",
         "none": "— None —",
         "mode": "Mode",

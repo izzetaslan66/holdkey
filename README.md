@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="assets/logo.png" alt="Basılı Tut logo" width="128">
+  <img src="assets/logo.png" alt="HoldKey logo" width="128">
 </p>
 
-<h1 align="center">Basılı Tut</h1>
+<h1 align="center">HoldKey</h1>
 
 <p align="center">
   A tiny key-holding tool for Windows.<br>
@@ -38,23 +38,23 @@ Holds down the keyboard key or mouse button you pick until you stop it.
 - Global hotkey that works in any window (F6–F12, default **F8**)
 - English and Turkish interface, picked automatically from your Windows language on first run
 - "Always on top" option
-- Remembers your settings (`%APPDATA%\BasiliTut\settings.json`)
+- Remembers your settings (`%APPDATA%\HoldKey\settings.json`)
 - Sends scan codes, so most games pick up the key too
 - No dependencies, only the Python standard library
 
 ### Installation
 
-**Prebuilt exe:** download `BasiliTut.exe` from the [Releases](../../releases) page and run it.
+**Prebuilt exe:** download `HoldKey.exe` from the [Releases](../../releases) page and run it.
 
 **From source:** requires [Python 3.8+](https://www.python.org/downloads/).
 
 ```bash
-git clone https://github.com/izzetaslan66/basili-tut.git
-cd basili-tut
-python basili_tut.pyw
+git clone https://github.com/izzetaslan66/holdkey.git
+cd holdkey
+python holdkey.pyw
 ```
 
-You can also just double-click `basili_tut.pyw`.
+You can also just double-click `holdkey.pyw`.
 
 ### Usage
 
@@ -75,7 +75,7 @@ Closing the window always releases the keys. The hotkey itself can't be picked a
 build.bat
 ```
 
-This uses [PyInstaller](https://pyinstaller.org) to create `dist\BasiliTut.exe`.
+This uses [PyInstaller](https://pyinstaller.org) to create `dist\HoldKey.exe`.
 
 To change the logo, edit [`tools/make_icon.py`](tools/make_icon.py) and run `python tools/make_icon.py` (requires Pillow).
 
@@ -118,23 +118,23 @@ Seçtiğin klavye ya da fare tuşunu, sen durdurana kadar senin yerine basılı 
 - Her pencerede çalışan kısayol (F6–F12, varsayılan **F8**)
 - İngilizce ve Türkçe arayüz; ilk açılışta Windows'un diline göre otomatik seçilir
 - "Her zaman üstte" seçeneği
-- Ayarlar hatırlanır (`%APPDATA%\BasiliTut\settings.json`)
+- Ayarlar hatırlanır (`%APPDATA%\HoldKey\settings.json`)
 - Tuşları scan code ile gönderir, bu sayede çoğu oyun da tuşu algılar
 - Ek kütüphane gerekmez, sadece Python'un kendi modüllerini kullanır
 
 ### Kurulum
 
-**Hazır exe:** [Releases](../../releases) sayfasından `BasiliTut.exe` dosyasını indirip çalıştır.
+**Hazır exe:** [Releases](../../releases) sayfasından `HoldKey.exe` dosyasını indirip çalıştır.
 
 **Kaynaktan:** [Python 3.8+](https://www.python.org/downloads/) kurulu olmalı.
 
 ```bash
-git clone https://github.com/izzetaslan66/basili-tut.git
-cd basili-tut
-python basili_tut.pyw
+git clone https://github.com/izzetaslan66/holdkey.git
+cd holdkey
+python holdkey.pyw
 ```
 
-`basili_tut.pyw` dosyasına çift tıklayarak da açabilirsin.
+`holdkey.pyw` dosyasına çift tıklayarak da açabilirsin.
 
 ### Kullanım
 
@@ -155,7 +155,7 @@ Pencereyi kapatınca tuşlar her zaman bırakılır. Kısayol tuşu basılacak t
 build.bat
 ```
 
-Bu komut [PyInstaller](https://pyinstaller.org) ile `dist\BasiliTut.exe` dosyasını oluşturur.
+Bu komut [PyInstaller](https://pyinstaller.org) ile `dist\HoldKey.exe` dosyasını oluşturur.
 
 Logoyu değiştirmek istersen [`tools/make_icon.py`](tools/make_icon.py) dosyasını düzenleyip `python tools/make_icon.py` komutunu çalıştır (Pillow gerekir).
 

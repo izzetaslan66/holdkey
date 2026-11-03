@@ -1,4 +1,4 @@
-"""Basılı Tut: seçilen tuşları kısayolla basılı tutar, tekrar tekrar basar ya da bırakır."""
+"""HoldKey: seçilen tuşları kısayolla basılı tutar, tekrar tekrar basar ya da bırakır."""
 import json
 import os
 import sys
@@ -11,7 +11,9 @@ from tkinter import ttk
 import core
 from lang import DEFAULT, LANGUAGES
 
-SETTINGS_FILE = Path(os.environ.get("APPDATA", Path.home())) / "BasiliTut" / "settings.json"
+APPDATA = Path(os.environ.get("APPDATA", Path.home()))
+SETTINGS_FILE = APPDATA / "HoldKey" / "settings.json"
+OLD_SETTINGS_FILE = APPDATA / "BasiliTut" / "settings.json"  # uygulamanın eski adı
 # Exe içinde dosyalar geçici bir klasöre (_MEIPASS) açılıyor
 ICON_FILE = Path(getattr(sys, "_MEIPASS", Path(__file__).resolve().parent)) / "assets" / "icon.ico"
 TICK_MS = 20  # arayüz ve kısayol yoklaması; tuş basma ayrı iş parçacığında
@@ -26,7 +28,9 @@ HEADING = ("Segoe UI Semibold", 9)
 
 def load_settings():
     try:
-        data = json.loads(SETTINGS_FILE.read_text(encoding="utf-8"))
+        # Yeni klasörde ayar yoksa eski addaki ayarları bir kereliğine okuyoruz
+        path = SETTINGS_FILE if SETTINGS_FILE.exists() else OLD_SETTINGS_FILE
+        data = json.loads(path.read_text(encoding="utf-8"))
         if not isinstance(data, dict):
             data = {}
     except (OSError, ValueError):
